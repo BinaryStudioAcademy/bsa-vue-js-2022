@@ -17,7 +17,7 @@
                     datasets: [
                         {
                             backgroundColor: "#f87979",
-                            data: [41, 20, 12, 39,],
+                            data: this.data,
                         },
                     ],
                 },

@@ -100,12 +100,20 @@
                             <div class="py-4 fw-bold fs-3">
                                 0.0025
                             </div>
-                            <button
-                                type="button"
-                                class="w-100 btn btn-lg btn-outline-danger"
-                            >
-                                Delete
-                            </button>
+                            <div class="d-flex">
+                                <button
+                                    type="button"
+                                    class="w-100 btn btn-lg btn-outline-primary me-1"
+                                >
+                                    Details
+                                </button>
+                                <button
+                                    type="button"
+                                    class="w-100 btn btn-lg btn-outline-danger ms-1"
+                                >
+                                    Delete
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -120,12 +128,20 @@
                             <div class="py-4 fw-bold fs-3">
                                 0.1111
                             </div>
-                            <button
-                                type="button"
-                                class="w-100 btn btn-lg btn-outline-danger"
-                            >
-                                Delete
-                            </button>
+                            <div class="d-flex">
+                                <button
+                                    type="button"
+                                    class="w-100 btn btn-lg btn-outline-primary me-1"
+                                >
+                                    Details
+                                </button>
+                                <button
+                                    type="button"
+                                    class="w-100 btn btn-lg btn-outline-danger ms-1"
+                                >
+                                    Delete
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -133,11 +149,13 @@
         </main>
 
         <!-- CHART BLOCK -->
-        <h2 class="text-start mt-5">
-            Graphic
-        </h2>
-        <hr>
-        <BarChart />
+        <div v-if="selectedPair">
+            <h2 class="text-start mt-5">
+                Graphic
+            </h2>
+            <hr>
+            <BarChart />
+        </div>
     </div>
 </template>
 
@@ -155,6 +173,7 @@
         data() {
             return {
                 error: true,
+                selectedPair: "some-pair",
             };
         },
         computed: {
