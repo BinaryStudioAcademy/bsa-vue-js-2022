@@ -1,0 +1,2 @@
+export const GET_CURRENCY = "GET_CURRENCY";
+export const GET_CRYPTO_CURRENCY = "GET_CRYPTO_CURRENCY";
